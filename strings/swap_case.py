@@ -10,6 +10,11 @@ def swap_case(s):
             result.append(c)
 
     return ''.join(result)
+    #v2: Using List comprehensions
+    #return ''.join(c.lower() if c.isupper() else c.upper() for c in s)
+
+    #v3: Using power of pythons utility functions
+    #return s.swapcase()
 
 if __name__ == '__main__':
     s = input()
