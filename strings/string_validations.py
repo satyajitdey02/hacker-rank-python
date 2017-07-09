@@ -1,27 +1,14 @@
 if __name__ == '__main__':
     s = input()
 
-    isalnum = False
-    isalpha = False
-    isdigit = False
-    islower = False
-    isupper = False
+    '''print True if any(k in "0123456789" or k.lower() in "abcdefghijklmnopqrstuvwxyz" for k in S) else False
+    print True if any(k.lower() in "abcdefghijklmnopqrstuvwxyz" for k in S) else False
+    print True if any(k in "0123456789" for k in S) else False
+    print True if any(k in "abcdefghijklmnopqrstuvwxyz" for k in S) else False
+    print True if any(k in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for k in S) else False'''
 
-    for c in s:
-        if c.islower():
-            isalnum = True
-            isalpha = True
-            islower = True
-        elif c.isupper():
-            isalnum = True
-            isalpha = True
-            isupper = True
-        elif c.isdigit():
-            isdigit = True
-            isalnum = True
-
-    print(isalnum)
-    print(isalpha)
-    print(isdigit)
-    print(islower)
-    print(isupper)
+    print(any(c.isalnum() for c in s))
+    print(any(c.isalpha() for c in s))
+    print(any(c.isdigit() for c in s))
+    print(any(c.islower() for c in s))
+    print(any(c.isupper() for c in s))
